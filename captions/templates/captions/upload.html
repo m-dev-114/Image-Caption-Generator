@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Upload Image for AI Caption</h1>
+<form method="post" enctype="multipart/form-data" class="upload-form">
+    {% csrf_token %}
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit" class="btn">Generate Caption</button>
+</form>
+{% endblock %}
